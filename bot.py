@@ -4,8 +4,8 @@ from pyrogram import Client
 
 
 if bool(os.environ.get("ENV", False)):
-    from bot.sample_config import Config
-    from bot.sample_config import LOGGER
+    from sample_config import Config
+    from sample_config import LOGGER
 else:
     from config import Config
     from config import LOGGER
@@ -18,7 +18,7 @@ class Bot(Client):
             bot_token=Config.TG_BOT_TOKEN,
             api_id=Config.APP_ID,
             api_hash=Config.API_HASH,
-            plugins={
+            bot={
                 "root": "commands.py"
             },
         )
