@@ -40,7 +40,7 @@ async def send_text(bot, m: Message):
     id = m.from_user.id
     if id not in Config.AUTH_USERS:
         return
-    if (" " not in m.text) and ("send" in m.text) and (m.reply_to_message is not None):
+    if (" " not in m.text) and ("broadcast" in m.text) and (m.reply_to_message is not None):
         query = await query_msg()
         for row in query:
             chat_id = int(row[0])
