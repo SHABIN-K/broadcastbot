@@ -1,15 +1,15 @@
 import os
 import asyncio
-from presets import Presets
+from bot.presets import Presets
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from database.support import users_info
-from database.sql import add_user, query_msg
+from bot.database.support import users_info
+from bot.database.sql import add_user, query_msg
 
 
 if bool(os.environ.get("ENV", False)):
-    from sample_config import Config
+    from bot.sample_config import Config
 else:
     from config import Config
 
