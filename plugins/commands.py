@@ -4,8 +4,8 @@ from presets import Presets
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from bot.database.support import users_info
-from bot.database.sql import add_user, query_msg
+from database.support import users_info
+from database.sql import add_user, query_msg
 
 
 if bool(os.environ.get("ENV", False)):
