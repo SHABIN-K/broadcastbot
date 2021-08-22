@@ -19,7 +19,7 @@ class Bot(Client):
             api_id=Config.APP_ID,
             api_hash=Config.API_HASH,
             plugins={
-                "root": "bot"
+                "root": "plugins"
             },
         )
         self.LOGGER = LOGGER
